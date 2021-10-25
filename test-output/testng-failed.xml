@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="MTAS.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="Vaidating Title in the Homepage(failed)">
+    <classes>
+      <class name="MTAS.ValidateTitle">
+        <methods>
+          <include name="validateHeader"/>
+          <include name="initialize"/>
+          <include name="basePagenavigation"/>
+        </methods>
+      </class> <!-- MTAS.ValidateTitle -->
+      <class name="MTAS.ValidateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.ValidateNavigationBar -->
+      <class name="MTAS.Homepage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.Homepage -->
+    </classes>
+  </test> <!-- Vaidating Title in the Homepage(failed) -->
+  <test parallel="tests" name="Vaidating Homepage (failed)">
+    <classes>
+      <class name="MTAS.ValidateTitle">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.ValidateTitle -->
+      <class name="MTAS.Homepage">
+        <methods>
+          <include name="homepagenavigation"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.Homepage -->
+      <class name="MTAS.ValidateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.ValidateNavigationBar -->
+    </classes>
+  </test> <!-- Vaidating Homepage (failed) -->
+  <test parallel="tests" name="Vaidating Navigation Bar(failed)">
+    <classes>
+      <class name="MTAS.ValidateTitle">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.ValidateTitle -->
+      <class name="MTAS.ValidateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="PagenavigationBar"/>
+        </methods>
+      </class> <!-- MTAS.ValidateNavigationBar -->
+      <class name="MTAS.Homepage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- MTAS.Homepage -->
+    </classes>
+  </test> <!-- Vaidating Navigation Bar(failed) -->
+</suite> <!-- Failed suite [Suite] -->
